@@ -6,6 +6,7 @@ The web application was required to create a database to store employee name, ph
 + Add Employee to Database
 + Delete Employee from Database
 + Search Employee Using name, designation or phone
+
 Apart from the above features, the current web application also stores employee email address and picture. It also has features to update information of employees already in the database and view each employee's information on a different page. 
 ## Code Base Structure ##
 + **static** consists of all the css and media files.
