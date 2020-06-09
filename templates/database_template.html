@@ -1,0 +1,47 @@
+{% extends "main_template.html" %}
+{% block page_content %}
+<div class="container database">
+    <div class="content-header">SCIENTIA EMPLOYEE DATABASE</div>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-row">
+        <fieldset class="form-group col-md-10">
+            {{ form.keywords(class="form-control form-control-lg") }}
+        </fieldset>
+        <fieldset class="form-group search float-right col-md-2">
+            {{ form.search(class="btn btn-outline-info btn-lg") }}
+        </fieldset>
+        </div>
+    </form>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+            </thead>
+            {% if employees|length > 0 %}
+            <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td><a class="link" href="{{ url_for('employee',employee_id=employee.id) }}">
+                    {{ employee.name }}</a></td>
+                <td>{{ employee.designation }}</td>
+                <td>{{ employee.address }}</td>
+                <td >{{ employee.phone }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            {% endif %}
+        </table>
+    </div>
+    {% if employees|length == 0 %}
+    <div class="alert alert-danger">
+        No Empoyees Found
+    </div>
+    {% endif %}
+</div>
+{% endblock page_content %}

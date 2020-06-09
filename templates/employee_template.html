@@ -1,0 +1,53 @@
+{% extends "main_template.html" %}
+{% block page_content %}
+<div class="container">
+    <div class="content-header">SCIENTIA EMPLOYEE PROFILE</div>
+    <div class="container profile">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <img src="{{ url_for('static', filename=employee.picture)}}" class="profile-img">
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 profile-text"">
+                <h1> {{employee.name}}</h1>
+                <i><h3>{{employee.designation}}</h3></i>
+                <hr>
+                <p>
+                    Address: <strong>{{employee.address}}</strong><br>
+                    Phone:  <strong>{{employee.phone}}</strong><br>
+                    Email: <strong>{{employee.email}}</strong><br>
+                </p>
+                <a class="btn btn-outline-info" href="{{ url_for('edit_employee', employee_id=employee.id)}}">
+                    Edit Employee Information
+                </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Employee Information Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Once this information is deleted, it can not be recovered. Please confirm that you would like to delete {{employee.name}}'s information from the database.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <form action="{{ url_for('delete_employee', employee_id=employee.id) }}" method="POST">
+           <input class="btn btn-primary" type="submit" value="Confirm">
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock  %}
