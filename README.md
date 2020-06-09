@@ -6,13 +6,13 @@ A user friendly web application used to maintain an employee database. This is m
 
 ## Set-up ##
 To use this web application, first create and activate a new virtual environment using virtualenv.
-'''
+```
 pip install virtualenv
 virtualenv myproject source myproject/venv/bin/activate
-'''
+```
 Clone this repository and install the requirements.
-'''
+```
 git clone https://github.com/aryaapai/employee_database/
 pip -r requirements.txt
-'''
+```
 Run the main.py script to start the application. 
