@@ -1,6 +1,12 @@
 # Employee Database
 A user friendly web application used to maintain an employee database created using Python, Flask and SQLAlchemy. This is my submission for the coding round of the Scientia Internship. As of now the application has not been deployed.
-
+## Design Requirements ##
+The web application was required to create a database to store employee name, phone, address and designation. It also needed to have the following features : 
++ List Employees from Database
++ Add Employee to Database
++ Delete Employee from Database
++ Search Employee Using name, designation or phone
+Apart from the above features, the current web application also stores employee email address and picture. It also has features to update information of employees already in the database and view each employee's information on a different page. 
 ## Code Base Structure ##
 + **static** consists of all the css and media files.
   - *style.css* is the main style sheet for the web application.
