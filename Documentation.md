@@ -39,4 +39,25 @@ Run the main.py script to start the application.
 ```
 python main.py
 ```
-## User Manual ##
+## User Guide ##
++ To acess the employee database, go to the 
+
+## Backend Specification ##
++ Go to the home page *Request:* GET api/
++ Get all the employees *Request:* GET api/employees 
++ Search for specific employees *Request:* POST api/employees/
++ Add a new employee's information *Request:* GET api/employees/add 
++ Post a new employee's information *Request:* POST api/employees/add *Redirect:* GET api/employees if validated
++ Get a specific employees *Request:* GET api/employee/{employee_id}
++ Edit a specific employee's information *Request:* GET api/employee/{employee_id}/edit
++ Post a specific employee's edited information *Request:* POST api/employee/{employee_id}/edit *Redirect:* GET api/employees if validated
++ Delete a specific employee's information *Request:* POST api/employee/{employee_id}/delete *Redirect:* GET api/employees if confirmed deletion
+
+## Further Improvements ##
+There were certain parts of the project that I did not have enough time to complete. Here is how I would like to improve them.
++ Use Python's Whoosh to search for employees as it provides full text indexing and searching. 
++ Use Pagination while displaying the employee database to save memory.
++ Order the employee database table based on user's preference. 
++ Enhance the input of employee data, eg. asking for phone number as 3 different fields cont-area-ext.
++ Use Java Script to enhance UX/UI and add animations.
++ Use Pydocs to document the application. 
