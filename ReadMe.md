@@ -46,6 +46,8 @@ A new employee can be added to the Employee Database by clicking on the "Add a N
 
 The Employee's photo id and other details can be viewed by clicking on their name in the Employee Database Table. On this webpage with the specific Employee's data, the user can also chose to edit or delete this information. On clicking the "Edit Employee Information", the user is redirected to a page similar to the add page, excpet with the employee's information filled in. The procedure to edit the information is same as procedure to add a new employee's information. If the "Delete" button is clicked, the user will need to confirm the deletion of a data once again before it is deleted permanentaly. For both the action, after completetion the user is redirected to the Employee Database Table with an appropriate message on the screen.
 
+The navigation bar's "Scientia" tab will redirect the user to the home page, which just gives a description of the project.
+
 ## Backend Specification ##
 + Go to the home page *Request:* GET api/
 + Get all the employees *Request:* GET api/employees 
