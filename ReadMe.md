@@ -48,6 +48,8 @@ The Employee's photo id and other details can be viewed by clicking on their nam
 
 The navigation bar's "Scientia" tab will redirect the user to the home page, which just gives a description of the project.
 
+Please take a look at the **Screenshots** directory to get a better undertsanding of the application.
+
 ## Backend Specification ##
 + Go to the home page *Request:* GET api/
 + Get all the employees *Request:* GET api/employees 
