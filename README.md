@@ -1,6 +1,5 @@
-# employee_database
-# employee_database
-A user friendly web application used to maintain an employee database. This is my submission for the coding round of the Scientia Internship. As of now the application has not been deployed.
+# Employee Database
+A user friendly web application used to maintain an employee database created using Python, Flask and SQLAlchemy. This is my submission for the coding round of the Scientia Internship. As of now the application has not been deployed.
 
 ## Code Base Structure ##
 + **static** consists of all the css and media files.
@@ -13,6 +12,11 @@ A user friendly web application used to maintain an employee database. This is m
   - *employee_template.html* is the template for the page displays the data of a single employee in detail.
   - *input_template.html* is the template to input (add or update) employee infromation the database.
 + **venv** is the virtual environment used to keep the dependencies separate.
++ **main.py** script runs the Flask application and handles all the routes and requests.
++ **db.py** module contains the models [Employees].
++ **forms.py** contains classes for forms used in the application.
++ **requirements.txt** contains the dependencies required for the application. 
+
 ## Set-up ##
 To use this web application, first create and activate a new virtual environment using virtualenv.
 ```
@@ -28,3 +32,4 @@ Run the main.py script to start the application.
 ```
 python main.py
 ```
+## User Manual ##
